@@ -10,7 +10,7 @@ class UserRepository @Inject constructor(
 ) : BaseRepository() {
 
     suspend fun getNews() = safeApiCall {
-        api.getNews("Apple","2025-01-08","popularity","3e68509623994b0cbbc58a15486d5c14")
+        api.getNews("trump","3e68509623994b0cbbc58a15486d5c14")
     }
 
 
