@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_8sdp"
+    android:layout_marginTop="@dimen/_8sdp"
+    android:layout_marginEnd="@dimen/_8sdp"
+    android:animateLayoutChanges="true"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/_14sdp"
+    app:cardElevation="0dp"
+    app:strokeWidth="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/_14sdp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivImageNews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:background="@color/black"
+            android:scaleType="fitCenter"
+            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
+            app:srcCompat="@drawable/news_placeholder" />
+
+        <TextView
+            android:id="@+id/tvTitleNews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/lorem_ipsum_title"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvDescNews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:text="@string/lorem_ipsum_desc" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
