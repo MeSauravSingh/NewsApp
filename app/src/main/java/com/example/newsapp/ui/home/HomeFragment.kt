@@ -44,10 +44,14 @@ class HomeFragment:Fragment(R.layout.fragment_home) {
                         newsList.clear()
                         newsList.addAll(it.value.articles)
                         newsAdapter.submitList(newsList)
-                    }
-                    is Resource.Loading -> {}
-                    is Resource.Failure -> {
+                        progressBar.visibility = View.INVISIBLE
 
+                    }
+                    is Resource.Loading -> {
+                        progressBar.visibility = View.VISIBLE
+                    }
+                    is Resource.Failure -> {
+                        progressBar.visibility = View.INVISIBLE
                     }
                 }
             }

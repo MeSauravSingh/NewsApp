@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/baseline_newspaper_24"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_read"
+        android:icon="@drawable/baseline_chrome_reader_mode_24"
+        android:title="@string/title_read" />
+
+    <item
+        android:id="@+id/navigation_bookmark"
+        android:icon="@drawable/baseline_bookmark_24"
+        android:title="@string/title_bookmark" />
+
+</menu>

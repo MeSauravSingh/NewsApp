@@ -1,5 +1,6 @@
 package com.example.newsapp.network
 
+import com.example.newsapp.Constants.BASE_URL
 import com.google.gson.GsonBuilder
 import com.intuit.sdp.BuildConfig
 import okhttp3.OkHttpClient
@@ -9,10 +10,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Inject
 
 class RemoteDataSource @Inject constructor() {
-
-    companion object{
-        private const val BASE_URL = "https://newsapi.org/v2/"
-    }
 
     fun<Api> buildApi(
         api: Class<Api>
