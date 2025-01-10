@@ -34,7 +34,8 @@ class NewsAdapter : ListAdapter<Article, NewsAdapter.ViewHolder>(DiffCallBack())
                 ivImageNews.setGlide(itemView.context,article.urlToImage?:"")
                 tvTitleNews.text = article.title
                 tvDescNews.text = article.description
-
+                tvLikeCount.text = (100..1000).random().toString()
+                tvCommentCount.text = (100..1000).random().toString()
 
             }
         }
