@@ -13,7 +13,7 @@ class UserRepository @Inject constructor(
 
 
     suspend fun getNews() = safeApiCall {
-        api.getNews("trump",  Constants.API_KEY)
+        api.getNews("us",  Constants.API_KEY)
     }
 
 
