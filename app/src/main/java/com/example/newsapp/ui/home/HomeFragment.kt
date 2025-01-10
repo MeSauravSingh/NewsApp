@@ -1,5 +1,6 @@
 package com.example.newsapp.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -11,6 +12,7 @@ import com.example.newsapp.adapter.NewsAdapter
 import com.example.newsapp.data.Article
 import com.example.newsapp.databinding.FragmentHomeBinding
 import com.example.newsapp.network.Resource
+import com.example.newsapp.ui.article.ArticleActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -27,6 +29,7 @@ class HomeFragment:Fragment(R.layout.fragment_home) {
         binding.apply {
 
             val newsAdapter = NewsAdapter()
+
             rvNews.apply {
                 val llm = LinearLayoutManager(requireContext())
                 layoutManager = llm
@@ -47,6 +50,12 @@ class HomeFragment:Fragment(R.layout.fragment_home) {
 
                     }
                 }
+            }
+
+            newsAdapter.onItemClick = {
+                val intent = Intent(requireActivity(),ArticleActivity::class.java)
+                intent.putExtra("url",it.url)
+                startActivity(intent)
             }
 
         }

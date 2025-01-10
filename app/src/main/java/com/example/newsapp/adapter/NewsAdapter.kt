@@ -11,15 +11,20 @@ import com.example.newsapp.setGlide
 
 class NewsAdapter : ListAdapter<Article, NewsAdapter.ViewHolder>(DiffCallBack()) {
 
+    lateinit var onItemClick:(Article) -> Unit
     inner class ViewHolder(private val binding: RowNewsBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         init {
 
-            binding.apply {
-
-
-
+            binding.root.setOnClickListener {
+                val position = adapterPosition
+                if(position != RecyclerView.NO_POSITION){
+                    val item = getItem(position)
+                    if (item != null){
+                        onItemClick.invoke(item)
+                    }
+                }
             }
         }
 

@@ -15,6 +15,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NewsApp"
         tools:targetApi="31">
+
+        <activity
+            android:name="com.example.newsapp.ui.article.ArticleActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="fullSensor">
+        </activity>
+
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
